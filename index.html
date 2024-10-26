@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Avaliação</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Avaliação do Site</h2>
+        <form action="executa.php" method="post">
+
+            <div class="mb-3">
+                <label class="form-label">O que você achou do site &nbsp;</label><a href="https://www.significados.com.br/cores-2/"><b>https://www.significados.com.br/cores-2/</b></a>?
+                <div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="avaliacao" id="muitoBom" value="muito bom" required>
+                        <label class="form-check-label" for="muitoBom">Muito bom</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="avaliacao" id="bom" value="bom">
+                        <label class="form-check-label" for="bom">Bom</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="avaliacao" id="regular" value="regular">
+                        <label class="form-check-label" for="regular">Regular</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="avaliacao" id="ruim" value="ruim">
+                        <label class="form-check-label" for="ruim">Ruim</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="corFavorita" class="form-label">O que você mais gostou?</label>
+                <select class="form-select" id="corFavorita" name="corFavorita" required>
+                    <option value="" selected disabled>Selecione uma cor</option>
+                    <option value="azul">Azul</option>
+                    <option value="verde">Verde</option>
+                    <option value="amarelo">Amarelo</option>
+                    <option value="roxo">Roxo</option>
+                    <option value="rosa">Rosa</option>
+                    <option value="vermelho">Vermelho</option>
+                    <option value="laranja">Laranja</option>
+                    <option value="marrom">Marrom</option>
+                    <option value="cinza">Cinza</option>
+                    <option value="branco">Branco</option>
+                    <option value="preto">Preto</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="comentarios" class="form-label">Digite seus comentários no espaço abaixo:</label>
+                <textarea class="form-control" id="comentarios" name="comentarios" rows="4" placeholder="Escreva seus comentários aqui..." required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Diga-me como entrar em contato com você:</label>
+                <input type="text" class="form-control mb-2" id="nome" name="nome" placeholder="Nome" required>
+                <input type="email" class="form-control mb-2" id="email" name="email" placeholder="E-mail" required>
+                <input type="tel" class="form-control mb-2" id="fone" name="fone" placeholder="Telefone" required>
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="novidades" name="novidades">
+                <label class="form-check-label" for="novidades">Quero receber novidades por e-mail</label>
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-primary">Enviar Dados</button>
+                <button type="reset" class="btn btn-secondary">Limpar Formulário</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
